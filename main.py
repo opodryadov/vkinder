@@ -148,6 +148,9 @@ class VkBot:
                         self.offset += 1
                         self.find_dating_user()
                         self.get_top_photos()
+                        write_msg(self.user_id, f'Имя: {self.first_name}\n'
+                                                f'Фамилия: {self.last_name}\nСсылка: @id{self.dating_user_id}',
+                                  self.top_photos)
                         self.find_love()
 
                     # Пока
@@ -187,6 +190,9 @@ class VkBot:
                         self.offset += 1
                         self.find_dating_user()
                         self.get_top_photos()
+                        write_msg(self.user_id, f'Имя: {self.first_name}\n'
+                                                f'Фамилия: {self.last_name}\nСсылка: @id{self.dating_user_id}',
+                                  self.top_photos)
                         write_msg(self.user_id, DO_YOU_LIKE_IT_MESSAGE)
 
     # Получаем идентификатор города
